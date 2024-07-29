@@ -7,14 +7,13 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import us.deans.raven.processor.OppPost;
+import us.deans.raven.processor.OppProcessor_Mongo_Wildfly;
 import java.util.List;
 
 @Path("upload")
 public class OppUpload {
-
     Logger logger = LoggerFactory.getLogger(OppUpload.class);
-
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public Response setPostList(List<OppPost> postList) {
@@ -25,5 +24,4 @@ public class OppUpload {
         logger.info(msg);
         return Response.ok(msg).build();
     }
-
 }
