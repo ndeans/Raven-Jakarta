@@ -1,6 +1,7 @@
 package us.deans.opp.jakarta;
 
 import jakarta.ws.rs.Consumes;
+import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.core.MediaType;
@@ -13,7 +14,9 @@ import java.util.List;
 
 @Path("upload")
 public class OppUpload {
+
     Logger logger = LoggerFactory.getLogger(OppUpload.class);
+
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public Response setPostList(List<OppPost> postList) {
@@ -24,4 +27,12 @@ public class OppUpload {
         logger.info(msg);
         return Response.ok(msg).build();
     }
+
+    @GET
+    public Response getVersion() {
+        String msg = "Raven-Jakarta version 1.0";
+        logger.info(msg);
+        return Response.ok(msg).build();
+    }
+
 }

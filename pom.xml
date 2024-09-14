@@ -40,6 +40,11 @@
 			<artifactId>mongodb-driver-sync</artifactId>
 			<version>${mongodb.driver.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>us.deans.raven</groupId>
+			<artifactId>Raven-Processor</artifactId>
+			<version>1.0</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>Raven-Jakarta</finalName>
